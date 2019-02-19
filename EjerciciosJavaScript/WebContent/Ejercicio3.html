@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Ejercicio3</title>
+
+<script>
+function isPrime (n)
+{
+    if (n < 2) return false;
+
+    var q = Math.floor(Math.sqrt(n));
+
+    for (var i = 2; i <= q; i++)
+    {
+        if (n % i == 0)
+        {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+</script>
+
+</head>
+
+
+<body>
+  
+  <script>
+  
+  for(i=1;i<=100;i++)
+  {
+	 if(isPrime(i)==true)
+		 {
+	      document.write(i)
+	      document.write("\n")
+	  }
+	  
+  } 
+  </script>  
+
+
+
+</body>
+</html>

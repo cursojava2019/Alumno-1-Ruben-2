@@ -1,0 +1,14 @@
+<h2>Ejercicio 2</h2>
+<p>Nombre empleado: {{empleado.nombre}}</p>
+<p>Edad:{{empleado.edad}}</p>
+
+<div *ngIf="empleado.edad>=18"> Es mayor de edad.<br> </div>
+
+
+<table style='border: solid 1px; margin: 0 auto;'>
+    <thead>Sueldos</thead>
+    <div *ngFor="let item of empleado.salario">
+        <tr>{{item}}</tr>
+    </div>
+</table>
+

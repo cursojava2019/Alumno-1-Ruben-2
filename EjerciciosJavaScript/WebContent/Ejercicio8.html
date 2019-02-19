@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Ejercicio 8</title>
+
+<script>
+function myFunction() {
+  var str = document.getElementById("cad").value;
+  var res = str.split(" ");
+  var longitud=str.split(" ").length;
+  document.getElementById("demo").innerHTML = res;
+  
+  var texto="Numero de palabras: ";
+  texto= texto+str.split(" ").length+"<br />";
+  texto= texto+"Primera palabra: "+str.split(" ", 1)+"<br />";
+  texto=texto+"Ultima palabra: "+ res[longitud-1]+"<br />"; 
+  texto=texto+"Orden inverso: "+ res.reverse()+"<br />"; 
+  texto=texto+"Array ordenado de la A a la Z: "+ res.sort()+"<br />"; 
+  texto=texto+"Array ordenado de la Z a la A: "+ res.sort().reverse()+"<br />"; 
+  //nueva ventana
+  
+  var myWindow = window.open("", "", "width=300,height=300"); 
+  myWindow.document.write(texto);
+
+}
+
+
+
+</script>
+
+
+
+</head>
+<body>
+
+
+
+  <p>Introduzca cadena:</p>
+    <input type="text" id="cad" name="cadena" maxlength="125">
+    <button onclick="myFunction()">Try it</button>
+
+
+
+  <br>
+ 
+
+
+  <p id="demo"></p>
+
+
+
+
+</body>
+</html>

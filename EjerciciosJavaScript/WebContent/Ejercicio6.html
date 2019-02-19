@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Ejercicio6</title>
+<script>
+function validar(){
+	
+	if(document.crypto.contra.value=="12345")
+		{
+		  alert("Login OK")
+		}
+	else{
+		alert("Contraseña incorrecta")
+		
+	}
+
+}
+</script>
+
+</head>
+<body>
+
+<form name="crypto">
+  Introduzca contraseña:
+    <input type="password" name="contra">
+    <input type="button" value="pasar" onClick="validar()">
+
+  <br>
+ 
+</form>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+ ¿Cual opcion no es una figura?<br>
+  <input type="radio" name="colors" id="uno">Cuadrado<br>
+  <input type="radio" name="colors" id="dos">Circulo<br>
+  <input type="radio" name="colors" id="tres">Gato<br>
+</form>
+
+<button onclick="check()">Resultado</button>
+<p id="nota"></p>
+
+<script>
+function check() {
+
+if(document.getElementById("uno").checked == true)
+{
+  document.getElementById("nota").innerHTML="Nota: 1";
+}
+if(document.getElementById("dos").checked == true)
+{
+  document.getElementById("nota").innerHTML="Nota: 1";
+}
+if(document.getElementById("tres").checked == true)
+{
+  document.getElementById("nota").innerHTML="Nota: 0";
+}
+
+}
+
+</script>
+
+</body>
+</html>

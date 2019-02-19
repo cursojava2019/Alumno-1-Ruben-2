@@ -1,0 +1,34 @@
+@charset "ISO-8859-1";
+
+body {
+  width: 960px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+#datos, #principal {
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+#datos {
+ width: 260px;
+}
+
+#principal {
+  width: 700px;
+}
+
+#contenido {
+  list-style-type: none;
+  padding: 0;
+}
+
+#contenido li {
+  float: left;
+  width: 33%;
+}

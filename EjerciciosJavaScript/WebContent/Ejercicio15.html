@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Ejercicio 15</title>
+	
+	<script>
+     function validar(){
+	 
+	 var str=document.getElementById("comentarios").value;
+	 var str2=document.getElementById("contra").value;
+	 var valido=1;
+	 
+	 
+	
+	 
+	  
+	   
+	 
+	 
+	 // nombre, email, comentarios vacio
+	 if(document.getElementById("nombre").value=="" ){
+   
+         valido=0;
+	     alert("Nombre vacio");
+		 
+	   }
+	  
+      if(document.getElementById("email").value=="" ){
+   
+         valido=0;
+	     alert("Email vacio");
+		 
+	   } 
+	   
+	   if(document.getElementById("comentarios").value=="" ){
+         
+         valido=0;		 
+	     alert("Comentarios vacio");
+	   }  
+	   
+	   
+	   if(str.length>50){
+	      
+		 valido=0; 
+	     alert("Comentarios excesivos");
+	   }
+	   
+	   //email valido
+	   
+	 
+	   
+	   if(validarEmail(document.getElementById("email").value)==false)
+	   {
+	      valido=0;
+	      alert("Email no es valido");
+	   }
+	   
+	   
+	   
+	   function validarEmail(email) 
+	   {
+	    var re = /\S+@\S+\.\S+/;
+	    return re.test(email);
+	   }
+	   
+	 
+	   
+	  function verificar(cadena)
+      {	     
+         var nMay = 0;
+		 var nMin = 0; 
+		 var nNum = 0;
+	     var t1 = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+	     var t2 = "abcdefghijklmnñopqrstuvwxyz";
+	     var t3 = "0123456789";
+	     for (i=0;i<cadena.length;i++) {
+		     if ( t1.indexOf(cadena.charAt(i)) != -1 ) 
+			 {
+			   nMay++;
+			 }
+		     if ( t2.indexOf(cadena.charAt(i)) != -1 ) 
+			 {
+			   nMin++;
+			 }		    
+			if ( t3.indexOf(cadena.charAt(i)) != -1 )
+			{
+			  nNum++;
+			}
+	      }
+	     if( nMay>0 && nMin>0 && nNum>0 ){
+		     return true;
+		 }else{
+		   return false;
+		 }
+		
+       }
+	   
+	   if(str2.length<6 || verificar(str2)==false){
+	   
+	      valido=0;
+	      alert("Password incorrecto: debe ser mayor que 6, contener una letra may, letra min y un digito");
+	     
+	   }
+	   
+	   return valido;
+	}   
+	
+	
+	   function enviar(){
+	      
+	      if(validar()==1)
+		  {
+		   alert("Todo OK. Datos enviados!");
+		   return true;
+		  }
+		  else{
+		    alert("Algo hay mal");
+			return false;
+		  }
+	   
+	   }
+	   
+	   
+     
+    </script>
+	
+</head>
+<body>
+   <h1>Formulario de registro</h1>
+<form  id="procesar" name="procesar" onSubmit="return enviar()">
+<div>
+	<label for="nombre" >Nombre: </label>
+	<input type="text" style="margin-bottom:20px" name="nombre" id="nombre" onblur="validar()">
+</div>	
+
+<div>
+	<label for="email">Email: </label>
+	<input type="text" style="margin-bottom:20px" name="email" id="email" onblur="validar()">
+</div>	
+<div>
+	<label for="contra">Password: </label>
+	<input type="password" style="margin-bottom:20px" name="contra" id="contra" onblur="validar()">
+</div>	
+<div>
+	<label for="comentarios">Comentarios: </label>
+	<textarea type="text"  name="comentarios" id="comentarios" maxlength="150" rows="5" onblur="validar()"></textarea>
+</div>	
+<div>
+	<input type="submit" name="Conectate" value="Enviar" style="margin-top:20px" >
+</div>
+</form>
+   
+
+  
+   
+</body>
+</html>

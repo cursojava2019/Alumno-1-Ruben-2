@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Formulario de registro-Mi web</title>
+</head>
+<body>
+
+<form action="" method="GET">
+    <label >Nombre:</label> <input type="text" maxlength="50" id="nombre" /><br/>
+    <label >Apellidos:</label> <input type="text" maxlength="50" id="apellidos" /><br/>   
+	<label><input type="radio" name="sexo" value="hombre"/> Hombre</label><label><input type="radio" name="sexo" value="mujer" checked="checked" /> Mujer</label><br/>
+	<label >Correo:</label> <input type="text" id="correo" /><br/>
+	<label>Población:</label>
+	<select name="poblacion">
+       <option value="value1" selected>Alicante</option> 
+       <option value="value2">Madrid</option>
+       <option value="value3">Sevilla</option>
+	   <option value="value4">Valencia</option>
+     </select><br/>
+	 
+	 <label>Descripcion</label> <textarea name="textarea" rows="10" cols="50"></textarea><br/>
+     
+	 <label><input type="checkbox" id="cbox1" value="first_checkbox" checked="checked"> Deseo recibir ofertas</label><br>
+
+     <label><input type="checkbox" id="cbox2" value="second_checkbox">Declaro haber leido</label><br/>
+ 
+     <input type="button" value="Enviar">
+ 
+ </form>
+
+
+</body>
+</html>

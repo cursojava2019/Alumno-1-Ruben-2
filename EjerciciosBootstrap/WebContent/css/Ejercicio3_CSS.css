@@ -1,0 +1,87 @@
+
+
+.rectangulo {
+     width: 250px; 
+     height: 200px; 
+     
+}
+#caja1,#caja2,#caja3{
+	background-color:red;
+}
+#cabecera{
+   background-color: lime;
+}
+/*hasta 600 px, */
+
+@media (max-width: 600px){
+ 
+ #cabecera{
+      background-color: pink ;
+    }
+ #uno{
+		text-align: left;
+	}
+	
+#tres{
+		text-align: right;
+	}
+		 
+ #caja2{
+		background-color:#ADD8E6;
+	}
+		 
+		 
+ #Pie1{
+   text-align: center;
+}
+
+#Pie2{
+   text-align: center;
+}
+	
+}
+
+
+
+/*desde 600 px hasta 1200 px*/
+
+
+@media (min-width: 601px) and (max-width: 1200px){
+	
+	#cabecera{
+      background-color: #ADD8E6 ;
+    }
+	
+	#uno{
+		text-align: left;
+	}
+	
+	#dos{
+		text-align: right;
+	}
+	
+	#caja3{
+		background-color:green;
+	}
+	
+	#Pie1{
+   text-align: center;
+}
+
+	#Pie2{
+   text-align: center;
+}
+
+
+}
+
+@media (min-width: 1201px)
+{
+	
+
+}
+
+
+	
+	
+}

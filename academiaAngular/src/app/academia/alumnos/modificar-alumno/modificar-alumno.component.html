@@ -1,0 +1,10 @@
+<div [@routerTransition]>
+  <app-page-header [heading]="'Modificar Alumnos'" [icon]="'fa-new'"></app-page-header>
+  <div class="row">
+    <div class="col-12">
+        <app-formulario-alumno [modificar]='true' [alumnoModificar]="alumnoActual" (modificado)="modificar($event)"></app-formulario-alumno>
+
+    </div>
+
+    </div>
+</div>

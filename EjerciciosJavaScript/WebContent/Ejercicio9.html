@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+		<title>Ejercicio 9</title><meta charset="utf-8">
+		
+	    <script type="text/javascript">
+           function coordenadas(event) {
+            x=event.clientX;
+            y=event.clientY;
+     
+            document.getElementById("x").value = x;
+            document.getElementById("y").value = y;
+            setTimeout("coordenadas(event))",100);
+    }
+    </script>
+</head>
+	 <body onMouseMove="coordenadas(event);">
+		<form action="#" style="width:1000px;height:1000px">
+            <label for="x">X: </label><input type="text" id="x">
+            <label for="y">Y: </label><input type="text" id="y">
+        </form>
+	</body>
+</html>

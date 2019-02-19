@@ -1,0 +1,76 @@
+
+<div class="jumbotron">
+
+  <form [formGroup]="miFormulario" (ngSubmit)="guardarCambios()" novalidate="">
+
+<fieldset>
+    <div class="form-group">
+        <label class="form-control-label" for="nif">NIF</label>
+        <input class="form-control" type="text" placeholder="Introduzca el NIF" formControlName="nif" [ngClass]="{'is-invalid': miFormulario.get('nif').dirty && !miFormulario.get('nif').valid }">
+          <div *ngIf="miFormulario.get('nif').dirty && miFormulario.get('nif').errors"  class="alert alert-danger">
+              <p *ngIf="miFormulario.get('nif').hasError('required')">Este campo es obligatorio</p>
+             <p *ngIf="miFormulario.get('nif').hasError('minlength') || miFormulario.get('nif').hasError('maxlength')">Exactamente debe tener 9 caracteres (fuera Extranjeros)</p>
+         </div>
+
+  </div>
+    <div class="form-group">
+        <label class="form-control-label" for="nombre">Nombre</label>
+        <input class="form-control" type="text" placeholder="Introduzca el nombre" formControlName="nombre" [ngClass]="{'is-invalid': miFormulario.get('nombre').dirty && !miFormulario.get('nombre').valid }">
+          <div *ngIf="miFormulario.get('nombre').dirty && miFormulario.get('nombre').errors"  class="alert alert-danger">
+              <p *ngIf="miFormulario.get('nombre').hasError('required')">El nombre es obligatorio</p>
+             <p *ngIf="miFormulario.get('nombre').hasError('minlength')">Por lo menos 3 caracteres</p>
+         </div>
+  </div>
+  <div class="form-group">
+      <label class="form-control-label" for="apellido1">Primer Apellido</label>
+      <input class="form-control" type="text" placeholder="Introduzca el Primer Apellido" formControlName="apellido1" [ngClass]="{'is-invalid': miFormulario.get('apellido1').dirty && !miFormulario.get('apellido1').valid }">
+        <div *ngIf="miFormulario.get('apellido1').dirty && miFormulario.get('apellido1').errors"  class="alert alert-danger">
+            <p *ngIf="miFormulario.get('apellido1').hasError('required')">El apellido1 es obligatorio</p>
+           <p *ngIf="miFormulario.get('apellido1').hasError('minlength')">Por lo menos 3 caracteres</p>
+       </div>
+
+</div>
+<div class="form-group">
+    <label class="form-control-label" for="apellido2">Segundo Apellido</label>
+    <input class="form-control" type="text" placeholder="Introduzca el Segundo Apellido" formControlName="apellido2" [ngClass]="{'is-invalid': miFormulario.get('apellido2').dirty && !miFormulario.get('apellido2').valid }">
+      <div *ngIf="miFormulario.get('apellido2').dirty && miFormulario.get('apellido2').errors"  class="alert alert-danger">
+          <p *ngIf="miFormulario.get('apellido2').hasError('required')">El Segundo apellido es obligatorio</p>
+         <p *ngIf="miFormulario.get('apellido2').hasError('minlength')">Por lo menos 3 caracteres</p>
+     </div>
+
+</div>
+<div class="form-group">
+    <label class="form-control-label" for="telefono">Teléfono</label>
+    <input class="form-control" type="text" placeholder="Introduzca el telefono" formControlName="telefono" [ngClass]="{'is-invalid': miFormulario.get('telefono').dirty && !miFormulario.get('telefono').valid }">
+      <div *ngIf="miFormulario.get('telefono').dirty && miFormulario.get('telefono').errors"  class="alert alert-danger">
+          <p *ngIf="miFormulario.get('telefono').hasError('required')">Este campo es obligatorio</p>
+     </div>
+
+</div>
+<div class="form-group">
+<div class="checkbox">
+  <label class="" for="repetidor"><input  type="checkbox" formControlName="repetidor" > Repetidor </label>
+</div>
+</div>
+<div class="form-group">
+    <label class="form-control-label" for="correo">Correo Electrónico</label>
+    <input class="form-control" type="text" placeholder="Introduzca el Correo Electrónico" formControlName="correo" [ngClass]="{'is-invalid': miFormulario.get('correo').dirty && !miFormulario.get('correo').valid }">
+      <div *ngIf="miFormulario.get('correo').dirty && miFormulario.get('correo').errors"  class="alert alert-danger">
+          <p *ngIf="miFormulario.get('correo').hasError('required')">El correo es obligatorio</p>
+         <p *ngIf="miFormulario.get('correo').hasError('email')">El formato de Email no es correcto. Ej:"correo@gmail.com"</p>
+     </div>
+</div>
+
+<div class="form-group">
+    <label class="form-control-label" for="observaciones">observaciones Electrónico</label>
+    <textarea class="form-control"  placeholder="Introduzca el observaciones Electrónico" formControlName="observaciones" [ngClass]="{'is-invalid': miFormulario.get('observaciones').dirty && !miFormulario.get('observaciones').valid }"></textarea>
+      <div *ngIf="miFormulario.get('observaciones').dirty && miFormulario.get('observaciones').errors"  class="alert alert-danger">
+          <p *ngIf="miFormulario.get('observaciones').hasError('maxlength')">El tamaño máximo es de 1000 caracteres</p>
+
+     </div>
+</div>
+  </fieldset>
+
+  <button class="btn btn-primary" [disabled]="miFormulario.invalid" type="submit">Enviar</button>
+</form>
+</div>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Ejercicio 13</title>
+	
+	<script>
+            
+	        var num1 = 0;
+	        var num2 = 0;
+	        var opera;
+
+        //Colocar numero
+        function darNumero(numero){
+            if(num1==0){
+                num1 = numero;
+            }else{
+                num1 += numero;
+            }
+            refrescar();
+        }
+
+      
+
+        //C, pasa a 0
+        function darC(){
+            num1 = 0;
+            num2 = 0;
+            refrescar();
+        }
+
+
+        
+        function operar(valor){
+            if (num1 == 0){
+                num1 = parseInt(document.getElementById("valor_numero").value);
+            }
+            num2 = parseInt(num1);
+            num1= 0;
+            opera = valor;
+        }
+
+        //Función para pulsar igual
+            /*
+        	suma = 1
+        	resta = 2
+        	multiplicacion = 3
+        	division = 4
+        	potencia = 5
+        */
+
+        function esIgual(){
+            num1 = parseInt(num1);
+            switch (opera){
+                case 1:
+                    num1 += num2;
+                break;
+                case 2:
+                    num1 = num2 - num1;
+                break;
+                case 3:
+                    num1 *= num2;
+                break;
+                case 4:
+                    num1 = num2 / num1;
+                break;
+                
+            }
+            refrescar();
+            num2 = parseInt(num1);
+            num1 = 0;
+        }
+
+        function refrescar(){
+            document.getElementById("valor_numero").value = num1;
+        }
+    </script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</head>
+<body>
+    <table id="calculadora">
+        
+		<tr>
+            <td colspan="4">
+                <input type="text" id="valor_numero" maxlength="20" value="0" readonly="true">
+            </td>
+        </tr>
+		
+		
+        <tr>
+            
+            <td>
+                <input type="Button" id="Dividir" value="/" onclick="operar(4)">
+            </td>
+            <td>
+                <input type="Button" id="Multiplicar" value="x" onclick="operar(3)">
+            </td>
+			
+			<td>
+                <input type="Button" id="Restar" value="-" onclick="operar(2)">
+            </td>
+			
+			 <td>
+    	        <input type="Button" id="Sumar" value="+" onclick="operar(1)">
+    	    </td>
+        </tr>
+			
+        
+        <tr>
+            <td>
+                <input type="Button" id="7" value="7" onclick="darNumero('7')">
+            </td>
+            <td>
+                <input type="Button" id="8" value="8" onclick="darNumero('8')">
+            </td>
+            <td>
+                <input type="Button" id="9" value="9" onclick="darNumero('9')">
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                <input type="Button" id="4" value="4" onclick="darNumero('4')">
+            </td>
+            <td>
+                <input type="Button" id="5" value="5" onclick="darNumero('5')">
+            </td>
+            <td>
+                <input type="Button" id="6" value="6" onclick="darNumero('6')">
+            </td>
+    	   
+        </tr>
+		<tr>
+            <td>
+                <input type="Button" id="1" value="1" onclick="darNumero('1')">
+            </td>
+            <td>
+                <input type="Button" id="2" value="2" onclick="darNumero('2')">
+            </td>
+            <td>
+                <input type="Button" id="3" value="3" onclick="darNumero('3')">
+            </td>
+            <td>
+                <input type="Button" id="EsIgual" value="=" onclick="esIgual()">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="Button" id="0" value="0" onclick="darNumero('0')">
+            </td>
+	    
+    	    <td>
+    		   <input type="Button" id="C" value="C" onclick="darC()">
+    	    </td>
+        </tr>
+    </table>
+</body>
+</html>

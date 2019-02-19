@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Ejercicio11</title>
+<script>
+function validar(){
+	
+	if(document.formulario.numero.value>=1 && document.formulario.numero.value<=100)
+		{
+		  //alert("Login OK")
+		}
+	else{
+		alert("Valor incorrecto. Introduce un número entre 1 y 100")
+		document.formulario.numero.value="";
+		
+	}
+
+}
+</script>
+
+</head>
+<body>
+
+<form name="formulario">
+  Introduzca numero:
+    <input type="text" name="numero">
+    <input type="button" value="pasar" onClick="validar()">
+
+  <br>
+ 
+</form>
+
+</body>
+</html>

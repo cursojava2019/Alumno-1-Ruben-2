@@ -1,0 +1,37 @@
+<div [@routerTransition]>
+  <app-page-header [heading]="'Gestión Alumnos'" [icon]="'fa-edit'"></app-page-header>
+  <div class="row">
+    <div class="col-12">
+        <div class="card mb-3">
+            <div class="card-header">
+               <button class="btn btn-primary" (click)="irCrearAlumno()"  >Nuevo Alumno</button>
+            </div>
+            <div class="card-body table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>NIF</th>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Telefono</th>
+                        <th>Opciones</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let item of alumnos">
+                        <th scope="row">{{item.nif}}</th>
+                        <td>{{item.nombre}}</td>
+                        <td>{{item.apellido1}} {{item.apellido2}}</td>
+                        <td>{{item.telefono}}</td>
+                        <td><button (click)="modificar(item.id)" class="btn btn-primary .glyphicon .glyphicon-edit">Modificar</button> <button (click)="eliminar(item.id)" class="btn btn-primary .glyphicon .glyphicon-edit">Eliminar</button></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+</div>
+</div>
+
+
+</div>

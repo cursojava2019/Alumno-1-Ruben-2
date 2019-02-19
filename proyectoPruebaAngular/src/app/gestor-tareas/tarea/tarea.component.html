@@ -1,0 +1,3 @@
+<input type="checkbox"[(ngModel)]="tarea.hecho" />
+<span style="padding:10px;" [class.tachado]="tarea.hecho"> {{tarea.nombre}} </span>
+<button (click)="solicitarEliminar()" >Eliminar</button>

@@ -1,0 +1,10 @@
+<h2>Ejercicio 4</h2>
+
+<label>Introduce Nombre:<input type="text" name="input" [(ngModel)]="nombre"></label>
+<label>Introduce Password:<input type="text" name="input" [(ngModel)]="password"></label>
+
+<button *ngIf="nombre == password && nombre " >Cambio</button>
+
+<p *ngIf="password.length < 8">El texto es menor que 8</p>
+
+

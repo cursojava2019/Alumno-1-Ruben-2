@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Ejercicio7</title>
+
+
+<script>
+
+function validar(){
+  
+	var d = new Date();
+	var hora= d.getHours()
+
+	if(hora<=12)
+		{
+		
+		document.getElementById("parrafo").innerHTML="Buenos días,"+document.entrada.nombre.value;
+			
+    }else if(hora>12 && hora<=18) {
+		
+		document.getElementById("parrafo").innerHTML="Buenos tardes,"+document.entrada.nombre.value;
+	}
+	
+	
+	else
+	{
+		
+		document.getElementById("parrafo").innerHTML="Buenos noches,"+document.entrada.nombre.value;
+	}
+	
+	
+	
+}
+
+
+</script>
+
+
+</head>
+<body>
+
+<form name="entrada">
+  ¿Cual es tu nombre?:
+    <input type="text" name="nombre">
+    <input type="button" value="pasar" onClick="validar()">
+
+  <br>
+  
+  <p id="parrafo"></p>
+ 
+</form>
+
+
+  
+  
+</body>
+</html>

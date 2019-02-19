@@ -1,0 +1,19 @@
+
+
+
+  <p>
+  mi-componente works!
+</p>
+
+<p>Hola que pasa {{nombre}}</p>
+
+<button (click)="cambiarNombre('Jose')">Boton Jose</button>
+<button (click)="cambiarNombre('Lucia')">Boton Lucia</button>
+<button (click)="cambiarNombre('Ana')">Boton Ana</button>
+<p>
+<label>Introduce Nombre:</label><input type="text" [(ngModel)]= "nombreEntrada" [placeholder]="textoIntro">
+</p>
+
+<button (click)="cambiarNombreEntrada()"> Cambiar nombre</button>
+
+<h2>{{nombreEntrada}}</h2>

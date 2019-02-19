@@ -1,0 +1,11 @@
+<div [@routerTransition]>
+  <app-page-header [heading]="'Nuevo Alumnos'" [icon]="'fa-new'"></app-page-header>
+  <div class="row">
+    <div class="col-12">
+        <app-formulario-alumno [modificar]='false' (modificado)="crear($event)"></app-formulario-alumno>
+
+    </div>
+
+    </div>
+
+    </div>

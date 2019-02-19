@@ -1,0 +1,96 @@
+
+/*hasta 600 px, no hay diseño*/
+
+@media (max-width: 600px){
+  
+  
+  #datos ul {
+    padding-left: 0;
+  }
+
+  #datos li {
+    display: inline;
+  }
+  
+  #datos li:after {
+    content: "; ";
+  }
+	
+}
+
+
+
+/*desde 600 px hasta 1200 px*/
+/* diseño a dos columnas */
+
+@media (min-width: 601px) and (max-width: 1200px){
+body {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+#datos, #principal {
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+#datos {
+ width: 25%;
+}
+
+#principal {
+  width: 75%;
+}
+
+#apartados {
+  list-style-type: none;
+  padding: 0;
+}
+
+#apartados li {
+  float: left;
+  width: 33%;
+}
+
+}
+
+@media (min-width: 1201px)
+{
+	
+ body {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+#datos, #descripcion, #contenido {
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+#datos {
+ width: 33%;
+}
+
+#descripcion {
+  width: 33%;
+}
+
+#contenido {
+  width: 33%;
+ 
+}
+
+
+	
+	
+}

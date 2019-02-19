@@ -1,0 +1,25 @@
+<form name="calculator">
+
+    <p>Haz algun calculo para ver el resultado.</p>
+    <input type="textfield" name="ans" value={{resultado}}>
+    <br>
+    <input type="button" value="1" (click)="press(1)">
+    <input type="button" value="2" (click)="press(2)">
+    <input type="button" value="3" (click)="press(3)">
+    <input type="button" value="+" (click)=sumar(calculadora.total)>
+    <br>
+    <input type="button" value="4" onClick="4">
+    <input type="button" value="5" onClick="5">
+    <input type="button" value="6" onClick="6">
+    <input type="button" value="-" onClick=restar(calculadora.total)>
+    <br>
+    <input type="button" value="7" onClick="7">
+    <input type="button" value="8" onClick="8">
+    <input type="button" value="9" onClick="9">
+    <input type="button" value="*" onClick=multiplica(calculadora.total)>
+    <br>
+    <input type="button" value="0" onClick="0">
+    <input type="reset" value="c" onClick=reiniciar()>
+    <input type="button" value="/" onClick=dividir(calculadora.dividir)>
+    <input type="button" value="=" onClick="calculadora.total">
+    </form>
