@@ -14,24 +14,23 @@ export class ArticuloComponent implements OnInit {
   codigo: number;
 
   @Output()
-  eventoEliminacion: EventEmitter<number>;
-  @Output()
-  eventoModificar: EventEmitter<number>;
+  eventoEliminacion = new EventEmitter<number>();
+ 
 
   constructor() {
-    this.eventoEliminacion = new EventEmitter<number>();
   }
 
   ngOnInit() {
   }
 
   seleccionar(codigo: number) {
-    // console.log('seleccionar artículo ' + codigo);
-    this.eventoModificar.next(this.codigo);
+    console.log('seleccionar artículo ' + codigo);
+    this.codigo = codigo;
   }
 
   solicitarEliminar() {
-    // console.log('solicitar eliminar');
-    this.eventoEliminacion.next(this.codigo);
+    console.log('solicitar eliminar');
+    this.eventoEliminacion.emit(this.codigo);
   }
 }
+
